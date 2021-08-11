@@ -91,6 +91,7 @@ module StackProf
           @frames = presenter.overview_frames
           haml :overview
         rescue => error
+          raise error
           haml :invalid_dump
         end
       end
